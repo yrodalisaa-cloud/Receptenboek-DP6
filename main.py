@@ -1,6 +1,6 @@
 from recept import Recept 
-#from ingrediënt import Ingredient
-#from stap import Stap
+from ingredient import Ingredient
+from stap import Stap
 
 def main():
     recepten = []
