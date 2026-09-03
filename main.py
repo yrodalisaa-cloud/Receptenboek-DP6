@@ -2,7 +2,7 @@ from recept import Recept
 from ingredient import Ingredient
 from stap import Stap
 
-def main():
+def maak_recepten():
     recepten = []
 
     
@@ -86,5 +86,54 @@ def main():
 
     recepten.append(recept3)
 
+    return recepten
+
+def toon_overzicht(recepten):
+    print("Lekkere recepten voor 1")
+    for index, recept in enumerate(recepten, start=1):
+        print(f"{index}. {recept.get_naam()}")
+
+def toon_recept(recept):
+    print(f"\n{recept.get_naam()}")
+    print(recept.get_omschrijving())
+
+    print("\nIngrediënten:")
+    for ingredient in recept.get_ingredienten():
+        print(f"- {ingredient}")
+
+    print("\nStappen:")
+    for volgnummer, stap in enumerate(recept.get_stappen(), start=1):
+        print(f"{volgnummer}. {stap}")
+
+def kies_recept(recepten):
+     keuze = input("\nKies een receptnummer (of 'q' om te stoppen): ").strip()
+
+     
+     if keuze.lower() == "q":
+        return None
+ 
+     if not keuze.isdigit() or not (1 <= int(keuze) <= len(recepten)):
+        print("Recept niet gevonden.")
+        return "opnieuw"
+ 
+     return recepten[int(keuze) - 1]
+ 
+ 
+def main():
+    recepten = maak_recepten()
+ 
+    while True:
+        toon_overzicht(recepten)
+        resultaat = kies_recept(recepten)
+ 
+        if resultaat is None:
+            print("Tot ziens!")
+            break
+ 
+        if resultaat == "opnieuw":
+            continue
+ 
+        toon_recept(resultaat)
+    
 if __name__ == "__main__":
     main()
