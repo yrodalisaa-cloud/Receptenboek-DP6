@@ -48,9 +48,43 @@ def main():
     recept2.voeg_stap_toe(Stap("Leg de tweede wrap er bovenop en druk deze een beetje aan. Bak de quesadilla in een droge koekenpan op middelhoog vuur totdat de onderkant goudbruin is. Draai hem voorzichtig om en bak ook de andere kant goudbruin."))
     recept2.voeg_stap_toe(Stap("Dek de wrap af met een andere wrap en bak de quesadilla in een contactgrill of in een droge koekenpan licht krokant."))
     recept2.voeg_stap_toe(Stap("Snijd de quesadilla in vieren en serveer met guacamole en zure room."))
-    
+
     recepten.append(recept2)
-    
+
+    recept3 = Recept("Carrot cake voor één", "Heerlijke warme carrot cake voor 1 persoon.")
+
+    recept3.voeg_ingredient_toe(Ingredient("geraspte wortel", 25, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("suiker", 50, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("gesmolten boter", 30, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("eidooier", 1, "stuk"))
+    recept3.voeg_ingredient_toe(Ingredient("bloem", 30, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("gemalen kaneel", 0.3, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("vanille-extract", 0.6, "milliliter"))
+    recept3.voeg_ingredient_toe(Ingredient("zout", 1, "snuf"))
+    recept3.voeg_ingredient_toe(Ingredient("melk", 15, "milliliter"))
+    recept3.voeg_ingredient_toe(Ingredient("gehakte pecannoten", 8, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("bakpoeder", 1.25, "gram"))
+
+    recept3.voeg_ingredient_toe(Ingredient("roomkaas (zacht)", 30, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("boter (zacht)", 15, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("poedersuiker", 30, "gram"))
+    recept3.voeg_ingredient_toe(Ingredient("vanille-extract (frosting)", 1.25, "milliliter"))
+
+
+    recept3.voeg_stap_toe(Stap("Verwarm de oven voor op 177°C en vet een klein ovenschaaltje (ca. 300 ml) licht in met boter."))
+    recept3.voeg_stap_toe(Stap("Meng de suiker, gesmolten boter, eidooier en vanille in een middelgrote kom met een vork tot een glad mengsel (ongeveer 45 seconden)."))
+    recept3.voeg_stap_toe(Stap("Klop in een andere kom de bloem, het bakpoeder, de kaneel en het zout door elkaar."))
+    recept3.voeg_stap_toe(Stap("Voeg de droge ingrediënten geleidelijk toe aan het natte mengsel en roer tot het net is gecombineerd."))
+    recept3.voeg_stap_toe(Stap("Giet de melk erbij en meng tot een glad beslag."))
+    recept3.voeg_stap_toe(Stap("Spatel de geraspte wortel en gehakte pecannoten er voorzichtig doorheen."))
+    recept3.voeg_stap_toe(Stap("Giet het beslag in het ovenschaaltje en bak gedurende 20-23 minuten tot een prikker in het midden er schoon uitkomt. Laat de cake volledig afkoelen."))
+
+    recept3.voeg_stap_toe(Stap("Meng voor de frosting de zachte roomkaas en zachte boter in een kleine kom tot een glad mengsel."))
+    recept3.voeg_stap_toe(Stap("Voeg de poedersuiker en vanille toe en meng tot een gladde frosting."))
+    recept3.voeg_stap_toe(Stap("Verdeel de frosting gelijkmatig over de bovenkant van de afgekoelde cake."))
+
+
+    recepten.append(recept3)
 
 if __name__ == "__main__":
     main()
